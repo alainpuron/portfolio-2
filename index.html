@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+  </head>
+  <body>
+
+
+    <style>
+      /* Default values  */
+      * {
+        margin: 0;
+        padding: 0;
+
+      }
+
+    
+      body {
+        padding: 100px;
+      }
+      .folder{
+        margin: auto;
+        max-height: fit-content;
+        width: 900px;
+        background: burlywood;
+        border-radius: 30px;
+        position: relative;
+        padding-bottom: 30px;
+      }
+
+    
+
+      .folder::before{
+        content: "";
+        position: absolute;
+        top: 100px;
+        right: -50px;
+        width: 50px;
+        height: 200px;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        background-color: rgb(224, 193, 151);
+      }
+
+      
+     
+
+      /* Contains all the content , the background is a piece of paper */
+      .container {
+        /* Centers the container */
+        margin: auto;
+        height: max-content;
+        width: 800px;
+        background-image: url(images/paper.png);
+        background-position: center;
+        background-size: cover;
+        rotate: -3deg;
+      }
+
+     
+      /* The card containing info */
+      .profile-card {
+        display: flex;
+        width: 400px;
+        height: fit-content;
+        padding: 20px;
+        border-radius: 15px;
+        /* border: 1px solid black; */
+        gap: 15px;
+        /* background: #dddad3; */
+        /* background-image: url(images/paper.jpg); */
+        background:#DADADA;
+        /* background-size: cover;
+        background-position: center; */
+        border: 0.5px solid black;
+        rotate: -5deg;
+        position: relative;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 12px;
+        /* box-shadow: 5px 5px rgba(0, 0, 0, 0.89); */
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        
+
+      }
+
+      /* The paper clip  */
+      .profile-card::before {
+        content: url(images/clip.png);
+        position: absolute;
+        left: -180px;
+        bottom: -30px;
+        transform: scale(0.3);
+      }
+
+      .profile-card h1 {
+        font-size: 50px;
+      }
+      .profile-card h2 {
+        font-size: 15px;
+        margin-bottom: 10px;
+      }
+      /* The picture in the card */
+      .profile-card > img {
+        height: 200px;
+        width: 150px;
+      }
+
+      /* This is the sticky note, provides some extra information */
+      .extra {
+        /* border: 1px solid black; */
+        height: fit-content;
+        rotate: -3deg;
+        color: red;
+        font-family: "Qwitcher Grypen", cursive;
+        /* background-image: url(images/sticky-note.png); */
+        background: skyblue;
+        background-position: center;
+        font-size: 30px;
+        padding: 20px;
+        margin-top: 10px;
+        position: relative;
+        width: 250px;
+        right: 0;
+        top: 0;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+
+      .extra::before{
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 20px;
+        top: -10px;
+        left: 40%;
+        background: #c0c0c071;
+      }
+
+      /* This is the extra information in the Card */
+      .info {
+        display: flex;
+        gap: 15px;
+      }
+
+      /* Default values for both rows */
+      .row-1,.row-2{
+        display: flex;
+        width: 100%;
+        gap: 20px;
+      }
+
+      .sub-row-2{
+        width: 45%;
+
+      }
+
+      /* Default value for the Div elements inside row 2 */
+      .row-2 > div{
+        position: relative;
+        margin-top: 30px;
+        
+      }
+
+      /* Value for the first div in row-2 (Work Expereince) */
+      .row-2 > div:nth-child(1){
+        top: 50px;
+        left: 130px;
+
+      }
+
+      /* The cell contain projects , it's the content under (Portfolio) */
+      .cell{        
+        /* border: 1px solid black; */
+        padding: 20px;
+        width: fit-content;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 15px;
+        width: 35%;
+        height: fit-content;
+        position: relative;
+        
+      }
+
+      .sub-row-2 > .cell{
+        width:80%;
+      }
+
+      /* This is the position of the cell  the projects */
+    .row-2 > div:nth-child(2){
+    top: 50px;
+    left:100px; 
+    }
+
+    /* Styling for the project  */
+    .project{
+        position: relative;
+        margin-bottom: 15px;
+        border: 2px solid black;
+        padding: 10px;
+        box-shadow: 8px -8px 0px -3px #000000, 8px -8px 0 0 #000;
+    }
+
+    /* .project::after{
+      content: '';
+      display: flex;
+    align-items: center;
+    justify-content: start;   
+      position: absolute;
+      top: 30%;
+      right: -120px;
+      width: 100px;
+      height: 40px;
+     
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.397), yellow);
+
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      transition: 1s ease-in-out;
+        } */
+/* 
+      .project:hover::after{
+
+        content: 'Visit';
+        display: flex;
+        align-items: center;
+        justify-content: center;  
+          width: 200px;
+          right:-200px;
+          transition: 1s ease-in-out;
+
+        } */
+
+    /* The title styling  EX: Work Experience / Portfolio */
+      .title{
+        width: fit-content; 
+        position: relative;
+        z-index: 2;
+        margin-bottom: 10px;
+      }
+
+      /* The yellow underline doing the marker effect */
+      .title::before{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 30px;
+        background: yellow;
+        rotate: -3deg;
+        z-index: -1; 
+      }
+
+      /* Styling for the p elements inside cell  */
+      .cell > p {
+        padding-bottom: 5px;
+        text-align: start;
+        position: relative;
+      }
+
+      /* This creates the yellow circles  */
+      .cell > p:nth-child(2)::before ,  .project > p:nth-child(2)::before{
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: yellow;
+        border: 1px solid black;
+        left: -30px;
+        border-radius: 50%;
+
+      }
+
+      /* Font size for first and fourth text inisde cell   */
+      
+      .cell > p:nth-child(2),.cell > p:nth-child(4)  {
+        font-size: 12px;
+        }
+
+        .cell > p:nth-child(3){
+        font-size: 20px;
+        font-weight: 700;
+        }
+
+        /* Creates the underline under the job position */
+        .cell > p:nth-child(3)::before{
+            position: absolute;
+            content: '';
+            height: 3px;
+            rotate: -3deg;
+            bottom: 5px;
+            left: 0;
+            width: 100%;
+            background: black;
+        }
+
+    .cell > p:nth-child(5){
+        font-size: 12px;
+        color:gray;
+        }
+
+        .row-3 > .cell{
+          position: relative;
+          top: 0;
+          left: 130px;
+          width: 80%;
+        }
+
+        .row-3 > .cell > ul > li{
+          margin-top: 15px;
+          list-style: none;
+        }
+
+        /* .sub-row-2 > .cell > ul{
+          display: flex;
+          width: max-content;
+        }
+
+        .sub-row-2 > .cell > ul > li{
+          width: 100%;
+          font-size: 15px;
+          
+        } */
+
+    </style>
+
+<div class="folder">
+
+
+    <div class="container">
+
+
+      <div class="row-1">
+
+
+            <div class="profile-card">
+
+
+              <img src="images/profile.jpg" />
+
+              <div class="about">
+                <h1>Alain P</h1>
+                <h2>Full Stack Web Developer</h2>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab totam
+                  blanditiis repellendus, odio doloremque hic iste sed deserunt iure
+                  quos.
+                </p>
+
+                <div class="info">
+                  <i class="fa-solid fa-phone"></i>
+                  <p>(970)-414-5985</p>
+                </div>
+
+                <div class="info">
+                  <i class="fa-solid fa-phone"></i>
+                  <p>alain.1puron@gmail.com</p>
+
+
+                </div>
+
+
+              </div>
+
+
+            </div>
+
+            <div class="extra">
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Perferendis hic odio accusamus mollitia consequuntur doloremque,
+                repellendus assumenda rem est error.
+              </p>
+            </div>
+
+      </div>
+
+      <div class="row-2">
+
+
+        <div class="sub-row-2">
+
+          <div class="cell">
+            <h1 class="title">Work Experience</h1>
+            <p>August 2023 - Present</p>
+            <p>Junior Web Developer</p>
+            <p>National Association For Gun Rights - Full Time</p>
+            <P>Loveland, Colorado</P>
+         </div>
+
+         <div class="cell">
+          <h1 class="title">Education</h1>
+          <p>March 2022 - December 2023</p>
+          <p>Computer Information Systems</p>
+          <p>Aims Community College - Full Time</p>
+          <P>Greeley, Colorado</P>
+       </div>
+
+   
+
+        </div>
+          
+
+            <div class="cell">
+
+                <h1 class="title">Portfolio</h1>
+
+                <div class="project">
+                    <p>Start-date</p>
+                    <p>Project #1</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, omnis?</p>
+                </div>
+                
+                <div class="project">
+                    <p>Start-date</p>
+                    <p>Project #1</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, quidem!</p>
+                </div>
+
+                <div class="project">
+                    <p>Start-date</p>
+                    <p>Project #1</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, laborum.</p>
+                </div>
+                
+            </div>
+
+      </div>
+
+      
+      <div class="row-3">
+        <div class="cell">
+
+          <h1 class="title">
+            Skills
+          </h1>
+          <ul>
+            <li>Front End Web Development</li>
+            <li>Back End Web Development</li>
+            <li>Database Administration</li>
+            <li>UX/UI</li>
+            </ul>
+        </div>
+       
+      </div>
+
+    </div>
+
+  </div>  
+
+  <script>
+
+    document.querySelector('.folder::before').addEventListener('mouseover', function() {
+        document.getElementsByClassName('.folder').style.background = 'red';
+    });
+    
+    document.querySelector('.folder::before').addEventListener('mouseout', function() {
+      document.getElementsByClassName('.folder').style.background = 'blue';
+    });
+    
+        </script>
+  </body>
+</html>

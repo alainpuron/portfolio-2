@@ -1,0 +1,835 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+:root{
+--color-1:#06141b;
+--color-2:#11212d;
+--color-3:#253745;
+--color-4:#4a5c6a;
+--color-5:#9babab;
+--color-6:#feffff;
+
+
+}
+
+body{
+    padding: 1em;
+    color:var(--color-6)
+}
+
+.container-1{
+   /* border: 1px solid black; */
+   width: 100%;
+   /* background: blue; */
+   height: 80vh;
+   display: flex;
+}
+
+.hero-container{
+    width: 60%;
+    height: auto;
+    background-image: url(images/space-man.jpg);
+    background-position: center;
+    border-radius: 15px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.hero-container::after{
+    content: '';
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    border-radius: 50%;
+    background: transparent;
+    bottom: 50%;
+    right: 0;
+    box-shadow: 12px 15px rgb(255, 255, 255);
+}
+
+.hero-container::before{
+    content: '';
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    border-radius: 50%;
+    background: transparent;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    box-shadow: 15px 15px rgb(255, 255, 255);
+}
+.menu{
+    width: 100%;
+    height: 50%;
+    /* background: #11212d; */
+}
+.row-1{
+    width: 100%;
+    height: 50%;
+    /* background: red; */
+    position: relative;
+    top: 0%;
+    display: flex;
+}
+
+/* top right of the back section */
+.row-1::after{
+    content: '';
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    border-radius: 50%;
+    background: transparent;
+    top: 14.5px;
+    right: 0;
+    z-index: 1;
+    box-shadow: 15px -15px rgb(255, 254, 254);
+}
+.info{
+    height: auto;
+    width: 80%;
+    position: relative;
+    /* background: black; */
+}
+
+/* inside the info section isnide the image to the bottom right */
+.info::after{
+    content: '';
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    border-radius: 50%;
+    background: transparent;
+    bottom: 0;
+    right: 0;
+    box-shadow: 15px 15px rgb(255, 255, 255);
+
+}
+
+/* Black section to the bottom right of the image */
+.right-hero{
+    background: var(--color-1);
+    height: auto;
+    width: 20%;
+    border-left: 15px solid white;
+    border-top: 15px solid white;
+    border-top-left-radius: 15px;
+    position: relative;
+}
+
+/* inside the black section, to the bottom left */
+.right-hero::after{
+    content: '';
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    border-radius: 50%;
+    background: transparent;
+    bottom: 0;
+    left: 0;
+    box-shadow: -15px 15px rgb(255, 255, 255);
+}
+/* inside the black section, to the top left */
+.right-hero::before{
+    content: '';
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    border-radius: 50%;
+    background: transparent;
+    top: 0;
+    left: 0;
+    box-shadow: -15px -15px rgb(255, 255, 255);
+}
+
+/* hero section end */
+.left-container{
+    background: var(--color-6);
+    width: 40%;
+    height: auto;
+    border-left:15px solid white;
+    position: relative;
+  
+    display: grid;
+    row-gap: 15px
+
+}
+.top{
+    background: red;
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-radius: 15px;
+    padding-bottom: 10px;
+
+    /* border-bottom: 7.5px solid var(--color-6); */
+}
+.top::after{
+    content: '';
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    border-radius: 50%;
+    background: transparent;
+    bottom: 0;
+    left: 0;
+    box-shadow: -15px 15px rgb(255, 255, 255);
+}
+.top::before{
+    content: '';
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    border-radius: 50%;
+    background: transparent;
+    bottom: 0;
+    right: 0;
+    box-shadow: 15px 15px rgb(255, 255, 255);
+}
+.bottom{
+    background: blue;
+    width: 100%;
+    height: auto;
+    position: relative;
+    /* border-top: 10px solid var(--color-6); */
+
+    border-radius: 15px;
+
+
+}
+
+
+.bottom::after{
+    content: '';
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    border-radius: 50%;
+    background: transparent;
+    top: 0;
+    left: 0;
+    box-shadow: -15px -15px rgb(255, 255, 255);
+}
+.bottom::before{
+    content: '';
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    border-radius: 50%;
+    background: transparent;
+    top: 0;
+    right: 0;
+    box-shadow: 15px -15px rgb(255, 255, 255);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .header-container{
+    position: relative;
+    display: flex;
+    gap: 20px;
+    height: 70vh;
+
+}
+
+.hero-container{
+    position: relative;
+    width: 60%;
+    border: 1px solid ;
+    padding: 1em;
+    background-image: url(images/space-man.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+    border: none;
+
+} */
+/* 
+.hero-container::after{
+    content: '';
+    width: 30px;
+    height: 30px;
+    right: 0;
+    top: 43.4%;
+    border-radius: 50%;
+    background: blue;
+    position: absolute;
+    box-shadow: 15px 15px rgb(255, 255, 255);
+
+}
+
+.hero-container::before{
+    content: '';
+    width: 30px;
+    height: 30px;
+    right: 0;
+    bottom: 268px;
+    border-radius: 50%;
+    background: red;
+    position: absolute;
+    box-shadow: 15px -15px rgb(255, 255, 255);
+    z-index: 2;
+
+}
+
+.header{
+    display: flex;
+    width: 100%;
+}
+.hero-bottom{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 45%; 
+    height: 55%;
+}
+
+
+.hero-info,.hero-right{
+bottom: 0px;
+position: relative;
+
+}
+
+.hero-info{
+    width: 70%;
+    left: 15px;
+    height: auto;
+    background: transparent;
+}
+.hero-info::after{
+    content: '';
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    position: absolute;
+    bottom: 3px;
+    right: 0px;
+    border-radius: 50%;
+    box-shadow: 15px 15px rgb(252, 252, 252);
+    z-index: 1;
+}
+
+.hero-right{
+    width: 30%;
+    background: black;
+    border-top: 15px solid var(--color-6);
+    border-left: 15px solid var(--color-6); 
+    
+
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    left: 15px;
+    bottom: 1px;
+}
+
+.hero-right::after{
+    content: '';
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    box-shadow: -15px -15px rgb(255, 255, 255);
+
+}
+.hero-right::before{
+    content: '';
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 50%;
+    box-shadow: -15px 15px rgb(255, 255, 255);
+
+}
+
+
+.right-container{
+    width: 40%;
+    border: 1px solid black;
+display: block;
+height: fit-content;    
+}
+
+.right-container > div{
+    border: 1px solid red;
+    height: 320px;
+    border-radius: 15px;
+}
+.right-container >div:nth-child(1){
+    margin-bottom: 20px;
+}
+.right-container >div:nth-child(2){
+    margin-top: 10px;
+} */
+
+
+
+/* Hero image */
+ /* .hero{
+    width: 100%;
+    height: auto;
+    padding: 2em;
+    background-image: url(images/space-man.jpg);
+    position: relative;
+
+    border-radius: 30px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hero::before{
+    content: '';
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top:250px;
+    right: 0;
+    background: transparent;
+    box-shadow: 20px 20px rgb(255, 255, 255);
+}
+
+.inside-hero{
+    border: 1px solid white;
+    position: absolute;
+    bottom: 10px;
+    width: 70%;
+    margin: auto;
+}
+
+.inside-hero::after{
+    content: '';
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: red;
+    position: absolute;
+    bottom: -11px;
+    right: -25px;
+    box-shadow: 20px 20px rgb(255, 255, 255);
+    z-index: 1;
+
+} */
+
+/* .hero::after{
+    content: '';
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0px;
+    left: 67.5%;
+    background: red;
+    box-shadow: 20px 20px rgb(255, 255, 255);
+} */
+/* 
+.hero-sub{
+    min-width: 25%;
+    height: 20em; 
+    background:var(--color-1);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-bottom-right-radius: 30px;
+    border-top: 20px solid var(--color-6);
+    border-left: 20px solid var(--color-6);   
+}
+
+.hero-sub::after{
+    content: '';
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: transparent;
+    box-shadow: -20px -20px rgb(255, 255, 255);
+}
+
+
+.menu{
+    background: transparent;
+    display: flex; 
+    /* gap: 10px; */
+    /* align-items: center;
+    justify-content: flex-end;
+    background: transparent;
+    width: 100%;
+    min-height: 5em;
+    border-radius: 30px;
+
+} */
+
+/* .menu > .logo{
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.menu > .logo > img{
+    width: 25px;
+    height: 25px;
+}
+
+
+.menu > ul{
+    display: flex; 
+    margin-right: 10px; 
+    background: var(--color-6);
+    padding: 5px;
+    border-radius: 30px;
+   
+}
+.menu > ul > li{
+    list-style: none;
+    background: var(--color-6);
+    padding: 0.7em 1em 0.7em 1em;
+    border-radius: 30px;
+    color: var(--color-1);
+    position: relative;
+    z-index: 2;
+}
+
+
+
+
+.menu > ul > li:hover, .menu > ul > li:active{
+    background: #06141b;
+    color: var(--color-6);
+    transition: 500ms;
+}
+
+.right-side{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    min-width: 30vh;
+    min-height: 5em;
+    background: white;
+    border-bottom-left-radius: 30px;
+    border-bottom: 10px solid rgb(255, 255, 255);
+    border-left: 10px solid white;
+}  
+
+/* .main::after{
+    content: '';
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right:31vh;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: 20px -20px rgb(255, 255, 255);
+
+} */
+/* .right-side::after{
+    content: '';
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top:0;
+    left:-60px;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: 20px -20px rgb(255, 255, 255);
+
+}
+
+.right-side::before{
+    content: '';
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: -60px;
+    right:0px;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: 20px -20px rgb(255, 255, 255);
+
+}
+
+.right-side > a{
+    text-decoration: none;
+    color: var(--color-1);
+    font-size: 1rem;
+}
+.right-side > img{
+    width: 2rem;
+    height: 2rem;
+} */
+
+/* .left-side{
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 50vh;
+    min-width: 50vh;
+    height: 20vh;
+    background: white;
+    padding: 20px;
+    border-top-right-radius: 30px;
+    border-top: 10px solid rgb(255, 255, 255);
+    border-right: 10px solid white;
+}
+
+.left-side::before{
+    content: '';
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: -0px;
+    right:-60px;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: -20px 20px rgb(255, 255, 255);
+
+}
+
+.left-side::after{
+    content: '';
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -60px;
+    left:0px;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: -20px 20px rgb(255, 255, 255);
+
+} */
+
+/* .about{
+    display: inline;
+    text-align: center;
+    justify-content: center;
+    position: absolute;
+    right: 35%;
+    top:50%;
+
+    
+    
+}
+.about > h1{
+    top: 13rem;
+    left: 2rem;
+    font-size: 6rem;
+    color: var(--color-6);
+    font-weight: 700;
+
+}
+.about > h2{
+    font-size: 3rem;
+    color: var(--color-6);
+
+} */
+/* .left-side > div{
+    width: fit-content;
+    min-width: 10vh;
+    padding: 20px;
+    font-size: 1.5rem;
+    color: var(--color-1);
+} */
+
+
+/* White space to the left bottom */
+/* .left-content{
+    position: absolute;
+    bottom: -100px;
+    left: 0px;
+    height: 300px;
+    min-width: 50vh;
+    
+    background: rgb(255, 255, 255);
+    border-top-right-radius: 30px;
+    border-top: 10px solid white;
+    border-right: 10px solid white;
+    border-bottom: 1px transparent solid;
+} */
+
+
+
+/* Rounded border to the far left bottom of the hero */
+/* .left-content::before{
+    content: '';
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -59px;
+    left: 0px;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: -20px 20px rgb(255, 255, 255);
+} */
+
+/* Border to the bottom center-left of the image */
+ /* .left-content::after{
+    content: '';
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 99px;
+    right: -60px;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: -20px 20px rgb(255, 255, 255);
+}  */
+
+/* White space to the top right of the hero */
+/* .right-content{
+    position: absolute;
+    padding: 5px;
+    display: flex;
+    gap: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+   
+    font-size: 1.2rem;
+    top: 0px;
+    right: 0px;
+    height: 50px;
+    min-width: 15vh;
+    border-top: transparent 0px solid;
+    background: rgb(255, 255, 255);
+
+    border-bottom-left-radius: 30px;
+    border-bottom: 10px solid white;
+    border-left: 10px solid white;
+} */
+
+
+ /* Social profile image in the top right  */
+/* .right-content > img{
+    height: 30px;
+} */
+/* link color  */
+/* .right-content > a{
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--color-1);
+} */
+
+/* border style to the left of the right container  */
+/* .right-content::before{
+    content: '';
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    left: -60px;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: 20px -20px rgb(255, 255, 255);
+} */
+ /* border style to the lower right of the image */
+/* .right-content::after{
+    content: '';
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: -60px;
+    right: 0px;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: 20px -20px rgb(255, 255, 255);
+} */
+
+/* .main > a{
+    color: white;
+    position: absolute;
+    right: 300px;
+    top: 20px;
+    background: var(--color-1);
+    padding: 15px 20px 15px 20px;
+    border-radius: 30px;
+
+}
+.main > a::after{
+    content: '';
+    width: 60px;
+    height: 60px;
+    background: white;
+    position: absolute;
+    border-radius: 50%;
+    top: -5px;
+    left: 80px;
+} */
+/* Menu styling */
+
+
+
+
